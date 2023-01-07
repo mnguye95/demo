@@ -36,8 +36,8 @@ const Nav = () => {
 
             {item.subMenu && (
               <div className={styles.dropdownContent}>
-                {item.subMenu.map((subItem) => (
-                  <p>{subItem.anchor}</p>
+                {item.subMenu.map((subItem, j) => (
+                  <p key={index + ' ' + j}>{subItem.anchor}</p>
                 ))}
               </div>
             )}
