@@ -1,0 +1,29 @@
+.verticalCarousel {
+  position: fixed;
+  top: 50%;
+  right: 2em;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.verticalCarousel ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; 
+  gap: 2em;
+}
+
+.selected {
+  border-right: 3px solid var(--main-color);
+  padding: 0.5em 1em 0.5em 0em;
+  transition-duration: 500ms;
+}
+
+.verticalCarousel ul li {
+  align-items: center; 
+  cursor: pointer;
+  font-family: "League Spartan", sans-serif;
+  list-style: none;
+  margin: 0.5em 1em 0.5em 0em;
+}

@@ -1,0 +1,102 @@
+.header {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+}
+
+.menu {
+  display: flex;
+  align-items: inherit;
+  gap: 4em;
+}
+
+.menu li {
+  display: inherit;
+  flex-direction: column;
+  align-items: inherit;
+  list-style: none;
+}
+
+.menu li a {
+  display: inherit;
+  align-items: inherit;
+  gap: 0.2em;
+  font-family: "League Spartan", sans-serif;
+  font-size: medium;
+}
+
+.menu li a:hover {
+  color: var(--main-color);
+  text-decoration: underline;
+  transition-duration: 5ms;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
+}
+
+.cta {
+  display: inherit;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  gap: 0.2em;
+  padding: 0.4em 1.2em 0.4em 1.2em;
+  font-size: 1.1em;
+  color: white;
+  background: var(--main-color);
+  font-family: "League Spartan", sans-serif;
+  transition-duration: 100ms;
+}
+
+.cta:hover {
+  transform: translateX(4px);
+  transition-duration: 100ms;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 1em 0 1em 0;
+}
+
+.dropdownContent {
+  cursor: pointer;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  margin-top: 30px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdownContent p {
+  font-family: "League Spartan", sans-serif;
+  color: black;
+  padding: 1em;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent p:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdownContent {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-4px);
+  transition-duration: 400ms;
+}
+
+.dropdownContent:hover .dropdownContent {
+  display: block;
+}
+
+.dropdown:hover .dropdown-link {
+  background-color: #3e8e41;
+}
