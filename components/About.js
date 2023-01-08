@@ -2,11 +2,10 @@ import { React, forwardRef, useState } from "react";
 import Image from "next/image";
 import styles from "../styles/About.module.css";
 import {
-  AiOutlineArrowRight,
   AiOutlineMinus,
   AiOutlinePlus,
 } from "react-icons/ai";
-import { HiChevronRight } from "react-icons/hi";
+import { HiChevronRight, HiArrowRight } from "react-icons/hi";
 
 const About = (props, ref) => {
   const [active, setActive] = useState({
@@ -18,7 +17,15 @@ const About = (props, ref) => {
     <section ref={ref} id="2" className={`${styles.last} fadeup`}>
       <div className={styles.wrapper}>
         <div className={styles.about}>
-          <h3 className={styles.aboutTitle}>Wissenswertes</h3>
+          <div className={styles.aboutTitleWrapper}>
+            <Image
+              className={styles.aboutTitleImage}
+              width={75}
+              height={75}
+              src="/home/01.png"
+            />
+            <h3 className={styles.aboutTitle}>Wissenswertes</h3>
+          </div>
           <div className={styles.aboutHeader}>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
@@ -75,20 +82,24 @@ const About = (props, ref) => {
               <div className={styles.questions}>
                 <div
                   onClick={() => setActive({ ...active, 0: !active[0] })}
-                  className={`${active[0] ? styles.activeQuestion : styles.inactiveQuestion} ${
-                    styles.question
-                  }`}
+                  className={`${
+                    active[0] ? styles.activeQuestion : styles.inactiveQuestion
+                  } ${styles.question}`}
                 >
                   <div>
                     <span>
-                      <AiOutlineArrowRight
+                      <HiArrowRight
                         className={styles.icon}
                         size={25}
                         color="orange"
                       />{" "}
                       Bewirb dich bei uns massa
                     </span>
-                    {active[0] ? <AiOutlineMinus size={25} color="black" /> : <AiOutlinePlus size={25} color="gray"/>}
+                    {active[0] ? (
+                      <AiOutlineMinus size={25} color="black" />
+                    ) : (
+                      <AiOutlinePlus size={25} color="gray" />
+                    )}
                   </div>
                   <p className={`${active[0] ? styles.open : styles.closed}`}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -98,20 +109,24 @@ const About = (props, ref) => {
                 </div>
                 <div
                   onClick={() => setActive({ ...active, 1: !active[1] })}
-                  className={`${active[1] ? styles.activeQuestion : styles.inactiveQuestion} ${
-                    styles.question
-                  }`}
+                  className={`${
+                    active[1] ? styles.activeQuestion : styles.inactiveQuestion
+                  } ${styles.question}`}
                 >
                   <div>
                     <span>
-                      <AiOutlineArrowRight
+                      <HiArrowRight
                         className={styles.icon}
                         size={25}
                         color="orange"
                       />{" "}
                       Morbi amet aenean
                     </span>
-                    {active[1] ? <AiOutlineMinus size={25} color="black" /> : <AiOutlinePlus size={25} color="gray"/>}
+                    {active[1] ? (
+                      <AiOutlineMinus size={25} color="black" />
+                    ) : (
+                      <AiOutlinePlus size={25} color="gray" />
+                    )}
                   </div>
                   <p className={`${active[1] ? styles.open : styles.closed}`}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -121,20 +136,24 @@ const About = (props, ref) => {
                 </div>
                 <div
                   onClick={() => setActive({ ...active, 2: !active[2] })}
-                  className={`${active[2] ? styles.activeQuestion : styles.inactiveQuestion} ${
-                    styles.question
-                  }`}
+                  className={`${
+                    active[2] ? styles.activeQuestion : styles.inactiveQuestion
+                  } ${styles.question}`}
                 >
                   <div>
                     <span>
-                      <AiOutlineArrowRight
+                      <HiArrowRight
                         className={styles.icon}
                         size={25}
                         color="orange"
                       />{" "}
                       Nunc condimentum nis
                     </span>
-                    {active[2] ? <AiOutlineMinus size={25} color="black" /> : <AiOutlinePlus size={25} color="gray"/>}
+                    {active[2] ? (
+                      <AiOutlineMinus size={25} color="black" />
+                    ) : (
+                      <AiOutlinePlus size={25} color="gray" />
+                    )}
                   </div>
                   <p className={`${active[2] ? styles.open : styles.closed}`}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.

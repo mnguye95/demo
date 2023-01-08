@@ -1,4 +1,4 @@
-import { React, useState, useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import styles from "../styles/Nav.module.css";
 import menu from "../data/menu";
@@ -9,11 +9,7 @@ const Nav = () => {
   return (
     <div className={styles.header}>
       <div>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="#">
           <Image
             src="/logo.svg"
             alt="Weiss Demo"
@@ -27,9 +23,7 @@ const Nav = () => {
       <ul className={styles.menu}>
         {menu.map((item, index) => (
           <li className={styles.dropdown} key={index}>
-            <a
-              href="#"
-            >
+            <a href="#">
               {item.anchor}
               {item.subMenu && <FaCaretDown className="uil" size={20} />}
             </a>
@@ -37,7 +31,7 @@ const Nav = () => {
             {item.subMenu && (
               <div className={styles.dropdownContent}>
                 {item.subMenu.map((subItem, j) => (
-                  <p key={index + ' ' + j}>{subItem.anchor}</p>
+                  <p key={index + " " + j}>{subItem.anchor}</p>
                 ))}
               </div>
             )}

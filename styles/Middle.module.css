@@ -1,97 +1,90 @@
 .heroWrapper {
   width: 100%;
 }
-
 .intersection {
-  display: flex;
-  flex-direction: column;
-  background-image: url("/home/middle.png");
   background-color: rgba(245, 248, 250, 255);
+  background-image: url("/home/middle.png");
   background-repeat: no-repeat;
   background-size: cover;
-  margin: -11em 0px -200px 0px;
-  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
   gap: 1.3em;
+  margin: -11em 0px -20em 0px;
+  min-height: 75vh;
   padding: 3rem 0px 0px 0px;
   z-index: 3;
 }
-
 .middle {
   display: flex;
-  position: relative;
-  max-width: var(--max-width);
+  gap: 2em;
   margin: 0 auto;
+  max-width: var(--max-width);
   padding: 15rem 0px 2rem 0px;
+  position: relative;
   z-index: 1;
-  /* gap: 2em; */
-}
 
+  /*  */
+}
 .middleLeft {
+  align-items: flex-start;
+  background-color: rgba(38, 54, 64, 255);
   display: inherit;
   flex-direction: column;
-  align-items: flex-start;
-  width: 75%;
-  background-color: rgba(38, 54, 64, 255);
   padding: 7rem;
+  width: 75%;
   z-index: 1;
 }
-
 .middleText {
   display: flex;
   flex-direction: column;
   gap: 0.8em;
   width: 75%;
 }
-
 .middleLeft p {
-  font-family: "Montserrat", sans-serif;
+  border-bottom: 1px solid rgba(212, 212, 212, 0.2);
   color: gray;
+  font-family: var(--font-text);
+  font-size: 1em;
   line-height: 1.4em;
   padding-bottom: 1em;
-  font-size: 1em;
-  border-bottom: 1px solid rgba(212, 212, 212, 0.2);
 }
 .middleLeft a {
-  display: flex;
-  font-family: "Montserrat", sans-serif;
   align-items: center;
   color: white;
+  display: flex;
+  font-family: var(--font-text);
   line-height: 1.3em;
 }
 .middleLeft span {
-  font-family: "League Spartan", sans-serif;
   color: gray;
-  line-height: 1.3em;
+  font-family: var(--font-title);
   font-size: 1.3em;
+  line-height: 1.3em;
 }
 .middleLeft h2 {
-  font-family: "League Spartan", sans-serif;
   color: white;
-  line-height: 1.2em;
+  font-family: var(--font-title);
   font-size: 2em;
+  line-height: 1.2em;
 }
-
 .bottom {
+  background-image: url("/home/bottom.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: inherit;
   flex-direction: column;
-  background-image: url("/home/bottom.png");
-  background-color: white;
-  background-repeat: no-repeat;
-  background-size: auto;
-  margin: -300px 0px 0px 0px;
-  min-height: 75vh;
   gap: 1.3em;
+  min-height: 70vh;
   padding: 3rem 0px 0px 0px;
 }
-
 .wrapper {
-  max-width: var(--max-width);
   margin: 0 auto;
+  max-width: var(--max-width);
 }
-
 .bottomImage {
-  position: relative;
-  margin: -200px 0px 0px 0px;
   float: right;
+  margin: -200px 0px 0px 0px;
+  position: relative;
   z-index: 2;
 }

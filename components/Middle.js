@@ -1,11 +1,11 @@
-import { React, forwardRef } from 'react'
+import { React, forwardRef } from "react";
 import Image from "next/image";
 import styles from "../styles/Middle.module.css";
 import { HiChevronRight } from "react-icons/hi";
 
 const Middle = (props, ref) => {
   return (
-    <section ref={ref} id='1' className='fadeup'>
+    <section ref={ref} id="1" className="fadeup">
       <div className={styles.intersection}>
         <div className={styles.middle}>
           <div className={styles.middleLeft}>
@@ -40,4 +40,4 @@ const Middle = (props, ref) => {
   );
 };
 
-export default forwardRef(Middle)
+export default forwardRef(Middle);

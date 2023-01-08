@@ -1,29 +1,31 @@
 .verticalCarousel {
   position: fixed;
-  top: 50%;
   right: 2em;
+  top: 50%;
   transform: translateY(-50%);
   z-index: 3;
 }
-
 .verticalCarousel ul {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center; 
   gap: 2em;
+  justify-content: space-between;
 }
-
 .selected {
   border-right: 3px solid var(--main-color);
   padding: 0.5em 1em 0.5em 0em;
+  transform: scale(1.5);
   transition-duration: 500ms;
 }
-
 .verticalCarousel ul li {
-  align-items: center; 
+  align-items: center;
   cursor: pointer;
-  font-family: "League Spartan", sans-serif;
+  font-family: var(--font-title);
   list-style: none;
   margin: 0.5em 1em 0.5em 0em;
+}
+.verticalCarousel ul li:not(.selected):hover {
+  transform: scale(1.5);
+  transition-duration: 100ms;
 }

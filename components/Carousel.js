@@ -7,19 +7,19 @@ const Carousel = ({ active, moveViewTo }) => {
       <ul>
         <li
           onClick={() => moveViewTo(0)}
-          className={active === 0 && styles.selected}
+          className={active === 0 ? styles.selected : undefined}
         >
           01
         </li>
         <li
           onClick={() => moveViewTo(1)}
-          className={active === 1 && styles.selected}
+          className={active === 1 ? styles.selected : undefined}
         >
           02
         </li>
         <li
           onClick={() => moveViewTo(2)}
-          className={active === 2 && styles.selected}
+          className={active === 2 ? styles.selected : undefined}
         >
           03
         </li>

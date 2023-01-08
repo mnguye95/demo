@@ -1,50 +1,54 @@
 .last {
-  background-image: url("/home/faq.png");
   background-color: white;
+  background-image: url("/home/faq.png");
   background-repeat: no-repeat;
   background-size: auto;
+  gap: 1.3em;
   margin: -100px 0px 0px 0px;
   min-height: 75vh;
-  gap: 1.3em;
   padding: 3rem 0px 0px 0px;
 }
-
 .about {
   display: flex;
   flex-direction: column;
   gap: 2em;
 }
-.aboutTitle {
-  font-family: "League Spartan", sans-serif;
-  color: black;
-  line-height: 1.2em;
-  font-size: 2em;
+.aboutTitleWrapper {
+  align-items: center;
+  display: inherit;
+  position: relative;
 }
-
+.aboutTitleImage {
+  left: -40px;
+  position: absolute;
+  top: -40px;
+}
+.aboutTitle {
+  color: black;
+  font-family: var(--font-title);
+  font-size: 2em;
+  line-height: 1.2em;
+}
 .aboutHeader {
   display: inherit;
   justify-content: space-between;
   width: 100%;
 }
-
 .aboutHeader p {
   color: slategray;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-text);
   font-size: 0.9em;
   line-height: 1.6em;
   width: 75%;
 }
-
 .aboutContent {
   display: inherit;
 }
-
 .aboutPhotos {
   display: inherit;
   gap: 2.5em;
   padding: 2em 2em 2em 0;
 }
-
 .aboutPhotos div {
   align-items: center;
   display: inherit;
@@ -52,136 +56,123 @@
   gap: inherit;
   justify-content: center;
 }
-
 .aboutImage {
   border-radius: 20px;
+  transition-duration: 300ms;
 }
-
+.aboutImage:hover {
+  transform: scale(1.05);
+  transition-duration: 300ms;
+}
 .aboutFAQ {
-  width: 100%;
   display: inherit;
   flex-direction: column;
+  width: 100%;
 }
-
 .numbers {
   display: inherit;
   padding: 4rem;
 }
-
 .numbers div:first-child {
-  padding-right: 2em;
   border-right: 1px solid rgba(212, 212, 212, 0.7);
+  padding-right: 2em;
 }
 .numbers div:last-child {
   padding-left: 2em;
 }
-
 .number {
   display: inherit;
   flex-direction: column;
 }
-
 .number span {
-  font-family: "League Spartan", sans-serif;
-  line-height: 1.3em;
+  font-family: var(--font-title);
   font-size: 3em;
+  line-height: 1.3em;
 }
 .number p {
-  font-family: "Montserrat", sans-serif;
   color: slategray;
-  line-height: 1.6em;
+  font-family: var(--font-text);
   font-size: 0.9em;
+  line-height: 1.6em;
 }
-
 .questions {
   display: inherit;
   flex-direction: inherit;
-  padding: 2em;
   gap: 2em;
+  padding: 2em;
 }
-
 .question {
+  border-bottom: 1px solid #ddd;
   display: inherit;
   flex-direction: inherit;
-  position: relative;
-  padding-bottom: 1em;
   margin-left: 2em;
-  border-bottom: 1px solid #ddd;
+  padding-bottom: 1em;
+  position: relative;
 }
-
 .question p {
-  font-family: "Montserrat", sans-serif;
-  color: slategray;
-  line-height: 1.6em;
+  color: #708090;
+  font-family: var(--font-text);
   font-size: 0.9em;
+  line-height: 1.6em;
 }
-
 .icon {
-  visibility: hidden;
+  left: -40px;
   opacity: 0;
   position: absolute;
-  left: -40px;
+  transform: rotate(45deg);
   transition-duration: 200ms;
+  visibility: hidden;
 }
-
 .activeQuestion .icon {
-  visibility: visible;
   opacity: 1;
   transform: translateX(5px);
   transition-duration: 200ms;
+  visibility: visible;
 }
-
 .inactiveQuestion span {
   color: slategray;
 }
-
 .open {
   display: block;
-  transition-duration: 200ms;
   padding-top: 0.5em;
+  transition-duration: 200ms;
 }
-
 .closed {
-  padding: 0;
   display: none;
+  padding: 0;
 }
-
 .question div {
+  align-items: center;
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
 }
-
 .question div span {
-  font-family: "League Spartan", sans-serif;
-  font-size: 1.2em;
-  display: inherit;
-  justify-content: inherit;
   align-items: inherit;
-  gap: 0.2em;
-}
-
-.wrapper {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.cta {
   display: inherit;
-  align-items: center;
-  cursor: pointer;
-  border-radius: 10px;
+  font-family: var(--font-title);
+  font-size: 1.2em;
   gap: 0.2em;
-  padding: 0.4em 1.2em 0.4em 1.2em;
-  font-size: 1.1em;
-  color: white;
-  background: var(--main-color);
-  font-family: "League Spartan", sans-serif;
-  transition-duration: 100ms;
+  justify-content: inherit;
 }
-
+.wrapper {
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+.cta {
+  align-items: center;
+  align-self: flex-start;
+  background: var(--main-color);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  display: inherit;
+  font-family: var(--font-title);
+  font-size: 1.1em;
+  padding: 0.4em 1.2em 0.4em 1.2em;
+  transition-duration: 300ms;
+}
 .cta:hover {
-  transform: translateX(4px);
-  transition-duration: 100ms;
+  transform: scale(1.1);
+  transition-duration: 300ms;
 }

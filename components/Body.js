@@ -38,16 +38,6 @@ const Body = () => {
     });
   }
 
-  // useEffect(() => {
-  //   if (activeBandRef.current) {
-  //     activeBandRef.current.scrollIntoView({
-  //       behavior: "smooth",
-  //       block: "nearest",
-  //       inline: "nearest",
-  //     });
-  //   }
-  // }, [activeBand]);
-
   const moveViewTo = (band) => {
     if (band === 0) {
       heroRef.current.scrollIntoView({

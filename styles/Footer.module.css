@@ -1,73 +1,64 @@
 .footer {
+  align-items: center;
+  background: rgba(38, 54, 64, 255);
   display: flex;
   flex-direction: column;
-  background: rgba(38, 54, 64, 255);
   justify-content: space-between;
-  align-items: center;
-  z-index: 2;
   padding: 1rem 0 1rem 0;
+  z-index: 2;
 }
-
 .outer {
   display: inherit;
   flex-direction: inherit;
-  max-width: var(--max-width);
   justify-content: space-between;
+  max-width: var(--max-width);
   width: 100%;
 }
 .firstrow {
+  border-bottom: 1px solid rgba(212, 212, 212, 0.2);
   display: inherit;
   justify-content: inherit;
   padding: 3rem 0 3rem 0;
-  border-bottom: 1px solid rgba(212, 212, 212, 0.2);
 }
-
 .firstrow strong {
-  font-weight: bold;
   font-size: 15px;
+  font-weight: bold;
 }
-
 .firstrow p {
   font-size: 12px;
 }
-
 .contact {
   display: flex;
   gap: 6em;
 }
-
 .contact div {
+  color: white;
   display: inherit;
   flex-direction: column;
+  font-family: var(--font-text);
   gap: 1em;
-  font-family: "Montserrat", sans-serif;
-  color: white;
 }
-
 .contact div p {
   font-size: 12px;
 }
-
 .contact div strong {
-  font-weight: bold;
   font-size: 15px;
+  font-weight: bold;
 }
-
 .secondrow {
   display: inherit;
   justify-content: inherit;
   padding: 2rem 0 1rem 0;
 }
-
 .secondrow div {
   display: inherit;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-text);
 }
 .secondrow div p {
+  border-right: 1px solid rgba(212, 212, 212, 0.2);
   color: white;
   font-size: 12px;
   padding: 0px 0.5rem 0px 0.5rem;
-  border-right: 1px solid rgba(212, 212, 212, 0.2);
 }
 .secondrow div p:last-child {
   border: none;
