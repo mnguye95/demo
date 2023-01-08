@@ -17,7 +17,7 @@ const Body = () => {
     const options = {
       root: null,
       threshold: 0.25,
-      rootMargin: "-175px",
+      rootMargin: "-12%",
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
