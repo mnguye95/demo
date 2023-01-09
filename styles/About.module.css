@@ -85,6 +85,7 @@
   flex-direction: column;
 }
 .number span {
+  cursor: default;
   font-family: var(--font-title);
   font-size: 3em;
   line-height: 1.3em;
@@ -119,16 +120,24 @@
   left: -40px;
   opacity: 0;
   position: absolute;
-  transform: rotate(45deg);
   transition-duration: 200ms;
   visibility: hidden;
 }
 .activeQuestion .icon {
   opacity: 1;
   transform: translateX(5px);
+  transform: rotate(45deg);
   transition-duration: 200ms;
   visibility: visible;
 }
+
+.inactiveQuestion:hover .icon {
+  opacity: 1;
+  transform: translateX(5px);
+  transition-duration: 200ms;
+  visibility: visible;
+}
+
 .inactiveQuestion span {
   color: slategray;
 }
@@ -136,6 +145,10 @@
   display: block;
   padding-top: 0.5em;
   transition-duration: 200ms;
+}
+.closed {
+  display: none;
+  padding: 0;
 }
 .closed {
   display: none;
@@ -159,9 +172,9 @@
   margin: 0 auto;
   max-width: var(--max-width);
 }
+
 .cta {
   align-items: center;
-  align-self: flex-start;
   background: var(--main-color);
   border-radius: 10px;
   color: white;
@@ -169,10 +182,20 @@
   display: inherit;
   font-family: var(--font-title);
   font-size: 1.1em;
+  gap: 0.2em;
   padding: 0.4em 1.2em 0.4em 1.2em;
   transition-duration: 300ms;
 }
 .cta:hover {
   transform: scale(1.1);
+  transition-duration: 300ms;
+}
+
+.iconcta {
+  transition-duration: 300ms;
+}
+
+.cta:hover .iconcta {
+  transform: translateX(5px);
   transition-duration: 300ms;
 }

@@ -39,7 +39,7 @@ const Nav = () => {
         ))}
       </ul>
       <a href="#" className={styles.cta}>
-        Button <HiChevronRight className="icon" size={25} />
+        Button <HiChevronRight className={styles.icon} size={25} />
       </a>
     </div>
   );

@@ -21,11 +21,29 @@
 .verticalCarousel ul li {
   align-items: center;
   cursor: pointer;
+  display: flex;
   font-family: var(--font-title);
+  font-size: 1em;
   list-style: none;
   margin: 0.5em 1em 0.5em 0em;
+  position: relative;
 }
 .verticalCarousel ul li:not(.selected):hover {
-  transform: scale(1.5);
-  transition-duration: 100ms;
+  transform: scale(1.3);
+  transition-duration: 300ms;
+}
+
+.icon {
+  left: -25px;
+  top: -5px;
+  color: var(--main-color);
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition-duration: 300ms;
+}
+.verticalCarousel ul li:not(.selected):hover  .icon {
+  visibility: visible;
+  opacity: 1;
+  transition-duration: 300ms;
 }

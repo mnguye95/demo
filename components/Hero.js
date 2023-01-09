@@ -15,7 +15,7 @@ const Hero = (props, ref) => {
           incidunt rerum nostrum iure dolorum nobis expedita, sit nisi facilis..
         </p>
         <a href="#">
-          Learn More <HiChevronRight className="icon" size={25} />
+          Learn More <HiChevronRight className={styles.icon} size={25} />
         </a>
       </div>
       <div className={styles.heroSecond}>

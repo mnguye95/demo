@@ -38,6 +38,16 @@
   transform: scale(1.1);
   transition-duration: 300ms;
 }
+
+.icon {
+  transition-duration: 300ms;
+}
+
+.heroFirst a:hover .icon {
+  transform: translateX(5px);
+  transition-duration: 300ms;
+}
+
 .heroFirst p {
   color: slategray;
   font-family: var(--font-text);

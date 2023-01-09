@@ -34,7 +34,7 @@ const About = (props, ref) => {
               voluptas incidunt officia. Hic?
             </p>
             <a href="#" className={styles.cta}>
-              Learn More <HiChevronRight className="icon" size={25} />
+              Learn More <HiChevronRight className={styles.iconcta} size={25} />
             </a>
           </div>
           <div className={styles.aboutContent}>

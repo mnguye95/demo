@@ -16,8 +16,8 @@ const Body = () => {
 
     const options = {
       root: null,
-      threshold: 0.25,
-      rootMargin: "-12%",
+      threshold: 0.2,
+      rootMargin: "-10%",
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -27,7 +27,7 @@ const Body = () => {
         } else {
           entry.target.classList.add('in-view');
         }
-        if (activeBand != parseInt(entry.target.id) && entry.isIntersecting) {
+        if (entry.isIntersecting) {
           setActiveBand(parseInt(entry.target.id));
         }
       });
@@ -62,7 +62,7 @@ const Body = () => {
 
   return (
     <div className={styles.mainWrapper}>
-      <Carousel active={activeBand || 0} moveViewTo={moveViewTo} />
+      <Carousel active={activeBand} moveViewTo={moveViewTo} />
       <Hero ref={heroRef} />
       <Middle ref={middleRef} />
       <About ref={aboutRef} />

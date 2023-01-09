@@ -29,7 +29,7 @@
   text-decoration-thickness: 3px;
   text-decoration: underline;
   text-underline-offset: 5px;
-  transition-duration: 5ms;
+  transition-duration: 15ms;
 }
 .cta {
   align-items: center;
@@ -48,6 +48,16 @@
   transform: scale(1.1);
   transition-duration: 300ms;
 }
+
+.icon {
+  transition-duration: 300ms;
+}
+
+.cta:hover .icon {
+  transform: translateX(5px);
+  transition-duration: 300ms;
+}
+
 .dropdown {
   display: inline-block;
   padding: 1em 0 1em 0;
