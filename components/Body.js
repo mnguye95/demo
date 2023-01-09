@@ -22,13 +22,11 @@ const Body = () => {
 
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        } else {
-          entry.target.classList.add('in-view');
-        }
         if (entry.isIntersecting) {
           setActiveBand(parseInt(entry.target.id));
+          entry.target.classList.add('in-view');
+        } else {
+          return;
         }
       });
     }, options);
